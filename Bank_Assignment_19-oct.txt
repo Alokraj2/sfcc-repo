@@ -1,0 +1,33 @@
+Assignment 19-oct
+-------------------------------------------------------------------------
+Bank
+-------------------------------------------------------------------------
+Bank
+Bank_code(PK)      Bank_Name       Address
+
+Branch
+Branch_code   Bank_code(FK)        Branch_Name     Branch_Address    
+---------------------------(PK)
+
+Branch Version-2
+Sno(PK)        Branch_code   Bank_code(FK)        Branch_Name     Branch_Address    
+
+
+Loan
+loan_ID(PK)        loan_Type       Sno(FK)  //Branch_code()   Bank_code
+                                              --------------------------(FK)
+Account
+Account_No(PK)     Account_Type    Sno(FK) //Branch_code()   Bank_code
+                                              --------------------------(FK)
+
+Customer
+Customer_ID(PK)    C_Name          Telephone       Address
+
+Avalled_By
+Avalled_NO(PK)    Loan_ID(FK)      Customer_ID(FK)
+
+Held_By
+S_No(PK)          Customer_ID(FK)  Account_No(FK) 
+===============================================================================
+
+
